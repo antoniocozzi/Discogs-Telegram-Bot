@@ -1,0 +1,16 @@
+{
+  "name": "discogsbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "disconnect": "^1.2.1",
+    "openurl": "^1.1.1",
+    "telegram-node-bot": "^4.0.5"
+  }
+}
