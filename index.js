@@ -11,5 +11,6 @@ const discogsController = new DiscogsController()
 
 discogsTelegramBot.router
 	.when(new Telegram.TextCommand('/hello', 'sayHelloCommand'), discogsController)
+	.when(new Telegram.TextCommand('/search', 'searchCommand'), discogsController)
 	// .when(new Telegram.TextCommand('/username', 'usernameCommand'), discogsController)
 	.otherwise(new OtherwhiseController())
