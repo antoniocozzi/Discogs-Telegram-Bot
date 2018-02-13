@@ -63,7 +63,6 @@ class DiscogsController extends Telegram.TelegramBaseController {
                          })
                          .catch(e => {
                               $.sendMessage(e)
-                              // console.log("famm nu bukkin che pier")
                          })
                })
      }
