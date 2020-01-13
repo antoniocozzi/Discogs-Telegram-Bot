@@ -5,6 +5,8 @@ const axios = require('axios')
 let db = new Discogs().database();
 let collection = new Discogs().user().collection();
 
+const token = 'znRRTXbZvhkJWWIDSeBmXftNwHTvTvvhRkFPapit';
+
 class DiscogsController extends Telegram.TelegramBaseController {
      sayHelloHandler($) {
           var username;
@@ -57,12 +59,13 @@ class DiscogsController extends Telegram.TelegramBaseController {
                .then($ => {
                     query = $.message.text
 
-                    axios.get(`https://api.discogs.com/database/search?q=${query}`)
+                    axios.get(`https://api.discogs.com/database/search?q=${query}&token=${token}`)
                          .then(response => {
-                              $.sendMessage(response)
+                              response.data.results.map(item => $.sendMessage(`Title: ${item.title}\n`))
                          })
                          .catch(e => {
                               $.sendMessage(e)
+                              console.log(e)
                          })
                })
      }

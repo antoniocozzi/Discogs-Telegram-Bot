@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.19.1",
     "disconnect": "^1.2.1",
     "openurl": "^1.1.1",
-    "telegram-node-bot": "^4.0.5"
+    "telegraf": "^3.35.0"
   }
 }
